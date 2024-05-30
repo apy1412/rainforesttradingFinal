@@ -1,0 +1,311 @@
+@font-face {
+  font-family: "oswald";
+  src: url("/fonts/oswald/oswald-variablefont_wght-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "oswald";
+  src: url("/fonts/oswald/oswald-heavy-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: bold;
+}
+@font-face {
+  font-family: "open_sanslight";
+  src: url("opensans-light-webfont.woff2") format("woff2"),
+    url("opensans-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "open_sansregular";
+  src: url("opensans-regular-webfont.woff2") format("woff2"),
+    url("opensans-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "opensans";
+  src: url("/fonts/opensans/opensans-variablefont_wdthwght-webfont.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --primayColor: #f1b345;
+  --lightBlue: #fdfcfa;
+  --darkColor: #232323;
+  --accentColor: #ec6543;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: "open_sanslight", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "oswald", sans-serif;
+  font-weight: bold;
+}
+img {
+  max-width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+}
+/* main section---------------------------------- */
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url("/images/Interface/hero.webp");
+  background-color: var(--primayColor);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+  padding: 3rem 3rem;
+}
+
+.logo {
+  width: 60px;
+}
+.menu {
+  width: 50px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 13rem;
+}
+.hero h1 {
+  font-size: 4.8rem;
+  text-transform: uppercase;
+  max-width: 90%;
+  font-weight: bold;
+  text-align: center;
+  margin: 7rem auto;
+  line-height: 1;
+  color: var(--darkColor);
+}
+.color {
+  color: var(--lightBlue);
+}
+
+.contact {
+  display: block;
+  text-align: center;
+  background-color: var(--accentColor);
+  width: 19rem;
+  text-decoration: none;
+  padding: 1rem;
+  border-radius: 5px;
+  color: var(--lightBlue);
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 462px) {
+  .hero {
+    gap: 15rem;
+  }
+
+  .hero h1 {
+    max-width: 60%;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .wrapper {
+    background-position: center;
+  }
+  .hero h1 {
+    max-width: 90%;
+    font-size: 9.6rem;
+  }
+  .hero {
+    gap: 2rem;
+  }
+}
+
+/* about Us Section */
+
+.about {
+  background-color: var(--darkColor);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.intro {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about h2 {
+  font-size: 4.8rem;
+  color: var(--accentColor);
+}
+.about p {
+  color: var(--lightBlue);
+  font-size: 1.6rem;
+  font-family: "open_sanslight", sans-serif;
+  font-weight: normal;
+}
+
+.missvision {
+  background-color: var(--primayColor);
+}
+
+.misson-container {
+  padding: 3rem;
+  color: var(--darkColor);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.about h3 {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+
+.misson-container p {
+  color: var(--darkColor);
+}
+
+/* Expertise Section */
+
+.expertise {
+  background-color: var(--darkColor);
+}
+.expertise-container {
+  color: var(--lightBlue);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.expertise-container h2 {
+  font-size: 4.8rem;
+  color: var(--accentColor);
+  text-transform: uppercase;
+}
+
+.expertise-container h3 {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  color: var(--primayColor);
+}
+.expertise-container p {
+  font-size: 1.6rem;
+}
+
+/* what we offer section */
+
+.offer {
+  background-color: var(--primayColor);
+}
+
+.offer-container {
+  padding: 3rem;
+  color: var(--darkColor);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.offer-container h2 {
+  font-size: 4.8rem;
+  color: var(--accentColor);
+  text-transform: uppercase;
+  line-height: 1;
+}
+.offer-container h3 {
+  color: var(--darkColor);
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+.offer-container p {
+  font-size: 1.6rem;
+}
+
+/* why choose us section */
+
+.choose {
+  background-color: var(--darkColor);
+}
+.choose-container {
+  color: var(--lightBlue);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.choose-container h2 {
+  font-size: 4.8rem;
+  color: var(--accentColor);
+  text-transform: uppercase;
+  line-height: 1;
+}
+.choose-container h3 {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+
+.choose-container p {
+  font-size: 1.6rem;
+}
+
+/* footer section */
+
+.footer-container {
+  background-color: var(--primayColor);
+  padding: 3rem;
+}
+.footer-container h2 {
+  font-size: 4.8rem;
+  color: var(--accentColor);
+  text-transform: uppercase;
+  line-height: 1;
+}
+.footer-container h3 {
+  color: var(--darkColor);
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+.footer-container p {
+  font-size: 1.6rem;
+}
+address {
+  font-size: 1.6rem;
+}
