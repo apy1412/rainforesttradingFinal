@@ -395,6 +395,27 @@ p {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .choose {
+    position: relative;
+    z-index: 2;
+  }
+  .choose::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 80%;
+    bottom: 0;
+    background: url(../images/person.webp) no-repeat;
+    background-position: bottom right;
+    background-size: contain;
+    opacity: 0.5;
+    background-color: var(--darkColor);
+    z-index: 1;
+  }
+}
+
 /* footer section */
 
 .footer-container {
