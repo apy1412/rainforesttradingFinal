@@ -81,7 +81,7 @@ img {
   width: 100%;
   height: 100vh;
   position: relative;
-  background-image: url("/images/Interface/hero.webp");
+  background-image: url("../images/hero.webp");
   background-color: var(--primayColor);
   background-repeat: no-repeat;
   background-position: center;
