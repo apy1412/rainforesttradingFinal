@@ -166,18 +166,19 @@ img {
   gap: 2rem;
 }
 .intro {
-  padding: 3rem;
-  display: flex;
-  flex-direction: column;
+  padding: 0 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 2rem;
 }
-
 .about h2 {
   font-size: 4.8rem;
   color: var(--accentColor);
+  text-transform: uppercase;
+  padding: 3rem;
 }
 .about p {
-  color: var(--lightBlue);
+  color: var(--primayColor);
   font-size: 1.6rem;
   font-family: "open_sanslight", sans-serif;
   font-weight: normal;
@@ -198,10 +199,32 @@ img {
 .about h3 {
   font-size: 2.4rem;
   text-transform: uppercase;
+  padding-bottom: 1rem;
 }
 
 .misson-container p {
   color: var(--darkColor);
+}
+
+@media screen and (min-width: 650px) {
+  .intro {
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3rem;
+  }
+
+  .about-img {
+    grid-column: 2/3;
+  }
+  .about p {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .misson-container {
+    flex-direction: row;
+  }
 }
 
 /* Expertise Section */
@@ -223,12 +246,27 @@ img {
 }
 
 .expertise-container h3 {
+  padding-bottom: 1rem;
   font-size: 2.4rem;
   text-transform: uppercase;
   color: var(--primayColor);
 }
 .expertise-container p {
   font-size: 1.6rem;
+}
+
+@media screen and (min-width: 650px) {
+  .expertise-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .expertise-container h2 {
+    grid-column: 1/-1;
+  }
+
+  .food {
+    grid-column: 1/-1;
+  }
 }
 
 /* what we offer section */
@@ -252,11 +290,25 @@ img {
 }
 .offer-container h3 {
   color: var(--darkColor);
+  padding-bottom: 1rem;
   font-size: 2.4rem;
   text-transform: uppercase;
 }
 .offer-container p {
   font-size: 1.6rem;
+}
+
+@media screen and (min-width: 650px) {
+  .offer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .offer-container h2 {
+    grid-column: 1/-1;
+  }
+  .matchmaking {
+    grid-column: 1/-1;
+  }
 }
 
 /* why choose us section */
@@ -286,6 +338,20 @@ img {
 
 .choose-container p {
   font-size: 1.6rem;
+}
+
+@media screen and (min-width: 650px) {
+  .choose-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .choose-container h2 {
+    grid-column: 1/-1;
+  }
+  .efficient {
+    grid-column: 1/-1;
+  }
 }
 
 /* footer section */
